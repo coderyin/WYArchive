@@ -7,9 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSArray+WYArchive.h"
 
 @interface WYArchive : NSObject
 
-+ (BOOL)save;
+
+/**
+ 存储对象到指定文件
+
+ @param filename 文件名
+ @return 是否成功
+ */
+- (BOOL)saveToFile:(NSString *)filename;
++ (id)loadObjectWithFilename:(NSString *)filename;
 
 @end
