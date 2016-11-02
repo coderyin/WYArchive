@@ -15,6 +15,8 @@
 		F3D57B801DC88D170085F728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D57B7E1DC88D170085F728 /* LaunchScreen.storyboard */; };
 		F3D57B8B1DC88D170085F728 /* WYarchiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D57B8A1DC88D170085F728 /* WYarchiveTests.m */; };
 		F3D57B961DC88D170085F728 /* WYarchiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D57B951DC88D170085F728 /* WYarchiveUITests.m */; };
+		F3D57BA51DC88DDA0085F728 /* WYArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D57BA41DC88DDA0085F728 /* WYArchive.m */; };
+		F3D57BA91DC88E690085F728 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D57BA81DC88E690085F728 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		F3D57B911DC88D170085F728 /* WYarchiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYarchiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D57B951DC88D170085F728 /* WYarchiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYarchiveUITests.m; sourceTree = "<group>"; };
 		F3D57B971DC88D170085F728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D57BA31DC88DDA0085F728 /* WYArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYArchive.h; path = ../WYArchive/WYarchive/WYArchive/WYArchive.h; sourceTree = "<group>"; };
+		F3D57BA41DC88DDA0085F728 /* WYArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYArchive.m; path = ../WYArchive/WYarchive/WYArchive/WYArchive.m; sourceTree = "<group>"; };
+		F3D57BA71DC88E690085F728 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = ../../WYArchive/WYarchive/Person.h; sourceTree = "<group>"; };
+		F3D57BA81DC88E690085F728 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = ../../WYArchive/WYarchive/Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		F3D57B641DC88D170085F728 = {
 			isa = PBXGroup;
 			children = (
+				F3D57BA61DC88DE50085F728 /* WYArchive */,
 				F3D57B6F1DC88D170085F728 /* WYarchive */,
 				F3D57B891DC88D170085F728 /* WYarchiveTests */,
 				F3D57B941DC88D170085F728 /* WYarchiveUITests */,
@@ -101,6 +108,8 @@
 		F3D57B6F1DC88D170085F728 /* WYarchive */ = {
 			isa = PBXGroup;
 			children = (
+				F3D57BA71DC88E690085F728 /* Person.h */,
+				F3D57BA81DC88E690085F728 /* Person.m */,
 				F3D57B731DC88D170085F728 /* AppDelegate.h */,
 				F3D57B741DC88D170085F728 /* AppDelegate.m */,
 				F3D57B761DC88D170085F728 /* ViewController.h */,
@@ -138,6 +147,15 @@
 				F3D57B971DC88D170085F728 /* Info.plist */,
 			);
 			path = WYarchiveUITests;
+			sourceTree = "<group>";
+		};
+		F3D57BA61DC88DE50085F728 /* WYArchive */ = {
+			isa = PBXGroup;
+			children = (
+				F3D57BA31DC88DDA0085F728 /* WYArchive.h */,
+				F3D57BA41DC88DDA0085F728 /* WYArchive.m */,
+			);
+			name = WYArchive;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D57BA51DC88DDA0085F728 /* WYArchive.m in Sources */,
 				F3D57B781DC88D170085F728 /* ViewController.m in Sources */,
+				F3D57BA91DC88E690085F728 /* Person.m in Sources */,
 				F3D57B751DC88D170085F728 /* AppDelegate.m in Sources */,
 				F3D57B721DC88D170085F728 /* main.m in Sources */,
 			);
