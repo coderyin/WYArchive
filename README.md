@@ -1,8 +1,45 @@
 # WYArchive
-##这是啥
- 利用runtime，减少归档类的代码量，并封装归档解档方法。可以实现自定义类型的持久化存储。
-##咋用
+##what is this
+利用runtime，减少归档类的代码量，并封装归档解档方法。可以实现自定义类型的持久化存储，自动归档解档。
+##如何使用
 将WYArchive拖入到你的工程中，需要归档的类继承WYArchive，不再需要实现encodeWithCoder和initWithCoder方法，省去代码量，更节省时间。
+
+###1.归档一个对象到文件中
+
+	NSString *filename = person.test
+	
+    Person *person = [Person new];
+    person.age = 13;
+    person.firstname = @"寅";
+    person.lastname = @"王";
+    
+    if ([person saveToFile:filename]) {
+        NSLog(@"归档一个对象到文件%@中成功", filename);
+    }else{
+        NSLog(@"归档对象到%@失败",filename);
+    }
+    
+###2.归档多个对象
+	- (void)archiveObjectsToFile:(NSString *)filePath{
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < 10; i++) {
+        Person *person = [[Person alloc] init];
+        person.age = i;
+        person.firstname = [[UIFont familyNames] objectAtIndex:i];
+        person.lastname = [[UIFont familyNames] objectAtIndexedSubscript:i];
+        [array addObject:person];
+    }
+    
+    [array wy_archiveObjectsFormArray:array toFilePath:filePath];
+}
+###3.解档
+
+	- (void)unarchiveObjectToFile:(NSString *)filename    
+{
+    id object = [WYArchive loadObjectWithFilename:filename];
+    }
 
 **demo中有实现代码。**
 

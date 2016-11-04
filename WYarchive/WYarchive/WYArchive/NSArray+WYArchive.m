@@ -20,6 +20,12 @@
     return [NSKeyedArchiver archiveRootObject:array toFile:[[self class] filePath:filename]];
 }
 
+- (NSArray *)wy_arryUnarchiveObjectWithFile:(NSString *)filename{
+    if (!filename || filename.length == 0) {
+        return nil;
+    }
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:filename];
+}
 + (NSString *)filePath:(NSString *)filename{
     
     NSString *paths = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];

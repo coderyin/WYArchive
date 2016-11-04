@@ -11,7 +11,7 @@
 
 @interface WYArchive : NSObject
 
-
++ (id)loadObjectWithFilename:(NSString *)filename;
 /**
  存储对象到指定文件
 
@@ -19,6 +19,6 @@
  @return 是否成功
  */
 - (BOOL)saveToFile:(NSString *)filename;
-+ (id)loadObjectWithFilename:(NSString *)filename;
+
 
 @end

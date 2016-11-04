@@ -103,7 +103,6 @@
     }else{
         NSLog(@"归档对象到%@失败",filePath);
     }
-    
 }
 
 #pragma mark - 归档多个对象

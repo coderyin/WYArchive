@@ -10,7 +10,22 @@
 
 @interface NSArray (WYArchive)
 
+
+/**
+ 归档存储一个数组
+
+ @param array 数组
+ @param filename 文件名
+ @return success
+ */
 - (BOOL)wy_archiveObjectsFormArray:(NSArray *)array toFilePath:(NSString *)filename;
-- (NSArray *)wy_arryWithFilePath:(NSString *)filename;
+
+/**
+ 解档一个数组
+
+ @param filename 文件名
+ @return 解档的数组
+ */
+- (NSArray *)wy_arryUnarchiveObjectWithFile:(NSString *)filename;
 
 @end
